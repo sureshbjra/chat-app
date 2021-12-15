@@ -1,0 +1,63 @@
+{
+  "name": "PrivateChat",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "reveive_time": {
+      "type": "string"
+    },
+    "send_time": {
+      "type": "string"
+    },
+    "reveive_date_format": {
+      "type": "string"
+    },
+    "reveive_date": {
+      "type": "date"
+    },
+    "send_date": {
+      "type": "date"
+    },
+    "send_date_format": {
+      "type": "string"
+    },
+    "isReceive": {
+      "type": "boolean"
+    },
+    "isSend": {
+      "type": "boolean"
+    },
+    "receive_sms": {
+      "type": "string"
+    },
+    "send_msg": {
+      "type": "string"
+    },
+    "msg_readed": {
+      "type": "boolean"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "time_order": {
+      "type": "number"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "chatList": {
+      "type": "belongsTo",
+      "model": "ChatList",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

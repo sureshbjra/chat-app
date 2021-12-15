@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Admin": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "AccessToken": {
+    "dataSource": "chatAppDB",
+    "public": false,
+    "relations": {
+      "user": {
+        "type": "belongsTo",
+        "model": "Admin",
+        "foreignKey": "userId"
+      },
+      "customer": {
+        "type": "belongsTo",
+        "model": "Customer",
+        "foreignKey": "customerId"
+      }
+    }
+  },
+  "Customer": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "Blog": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "ForumCategory": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "Forum": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "LikeAndDisLike": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "EditorNote": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "CustomerBlockCmd": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "ForumCommand": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "Contactus": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "FeedBackCategory": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "PrivateChat": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "CustomerChatList": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "ChatList": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "Groups": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "GroupContact": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "GroupChat": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "ReadedOfMsg": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "FriendRequest": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "FriendList": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "PrivateEditorNote": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "PublicEditorNote": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "Teenache": {
+    "dataSource": "chatAppDB",
+    "public": true
+  },
+  "TeenacheCommand": {
+    "dataSource": "chatAppDB",
+    "public": true
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ReadedOfMsg",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isReaded": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "groupChat": {
+      "type": "belongsTo",
+      "model": "GroupChat",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

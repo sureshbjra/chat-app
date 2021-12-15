@@ -1,0 +1,12 @@
+{
+  "chatAppDB": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "chatAppDB",
+    "password": "",
+    "name": "chatAppDB",
+    "user": "",
+    "connector": "mongodb"
+  }
+}

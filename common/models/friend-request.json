@@ -1,0 +1,60 @@
+{
+  "name": "FriendRequest",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "requestTime": {
+      "type": "string"
+    },
+    "requestDateFormat": {
+      "type": "string"
+    },
+    "requestDate": {
+      "type": "date"
+    },
+    "acceptTime": {
+      "type": "string"
+    },
+    "acceptDateFormat": {
+      "type": "string"
+    },
+    "acceptDate": {
+      "type": "date"
+    },
+    "isPrivate": {
+      "type": "boolean",
+      "default": true
+    },
+    "isAccepted": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "request": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "requestId"
+    },
+    "accept": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "acceptId"
+    },
+    "friendLists": {
+      "type": "hasOne",
+      "model": "FriendList",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

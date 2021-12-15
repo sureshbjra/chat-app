@@ -1,0 +1,72 @@
+<div class="content" style="margin-top: 3rem;" ng-controller="createCustomerCtl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-rose card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h3 class="card-title" style="font-weight: 500;">Create customer</h3>
+                    </div>
+                    <div class="card-content" style="padding: 20px;">
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" style="font-size: 1.8rem;font-weight: 500;">Email</label>
+                            <input type="email" required id="email" autocomplete="off" class="form-control">
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="email_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" style="font-size: 1.8rem;font-weight: 500;">Gender</label>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gender" value="male"> Male
+                                    <span class="circle">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="radio" name="gender" value="female">
+                                    Female
+                                    <span class="circle">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" id="isOlder" value="isOlder"> Is
+                                    Older
+                                    <span class="form-check-sign">
+                                        <span class="check"></span>
+                                    </span>
+                                </label>
+                            </div>
+                            <span style="color: red;font-weight: 600;" id="contact_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" style="font-size: 1.8rem;font-weight: 500;">Password</label>
+                            <input type="password" required id="password" autocomplete="off" class="form-control">
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="email_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label" style="font-size: 1.8rem;font-weight: 500;">Confirm Password</label>
+                            <input type="password" required id="confirmpassword" autocomplete="off" class="form-control">
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="email_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty" style="text-align: right;">
+                            <button type="button" id="create_btn" ng-click="create()" style="font-size: 1.2rem;"
+                                class="btn btn-fill btn-rose">Submit<div class="ripple-container"></div></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

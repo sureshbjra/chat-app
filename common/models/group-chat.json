@@ -1,0 +1,52 @@
+{
+  "name": "GroupChat",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "dateFormat": {
+      "type": "string"
+    },
+    "time": {
+      "type": "string"
+    },
+    "msg": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "time_order": {
+      "type": "number"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "groups": {
+      "type": "belongsTo",
+      "model": "Groups",
+      "foreignKey": ""
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "senderId"
+    },
+    "readedOfMsgs": {
+      "type": "hasMany",
+      "model": "ReadedOfMsg",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

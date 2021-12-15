@@ -1,0 +1,37 @@
+{
+  "name": "Blog",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isPrivate": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "fullDesc": {
+      "type": "string"
+    },
+    "img": {
+      "type": "object"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "likeAndDisLikes": {
+      "type": "hasMany",
+      "model": "LikeAndDisLike",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

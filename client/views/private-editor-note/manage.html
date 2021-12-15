@@ -1,0 +1,152 @@
+<div class="content" style="margin-top: 3rem;" ng-controller="manageeditornotePrivateCtl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-rose card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h3 class="card-title" style="font-weight: 500;">Manage editor's note</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
+                                <button type="button" ui-sref="create-private-editor-note" class="btn btn btn-success"
+                                    style="font-size: 1.2rem;text-transform: inherit;">
+                                    Create editor's note
+                                </button>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><span>Title</span></th>
+                                                <th><span>Full Description</span></th>
+                                                <th><span>Actions</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="list in editorNoteList">
+                                                <td>
+                                                    <span>
+                                                        {{list.title}}
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span>{{list.fullDesc}}</span>
+                                                </td>
+                                                <td class="td-actions">
+                                                    <button type="button" rel="tooltip" class="btn btn-info btn-round"
+                                                        data-original-title="" title=""
+                                                        ng-click="viewEditorNote(list.id)">
+                                                        <i class="material-icons">remove_red_eye</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip"
+                                                        class="btn btn-success btn-round" data-original-title=""
+                                                        title="" ng-click="editEditor(list.id)">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" class="btn btn-danger btn-round"
+                                                        data-original-title="" ng-click="popUpForDelete(list.id)"
+                                                        title="">
+                                                        <i class="material-icons">delete</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr ng-show="editorNoteList && editorNoteList.length==0">
+                                                <th colspan="3" style="text-align: center;">
+                                                    <span style="font-size: 1.4rem;">No Data!</span>
+                                                </th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="modalDeleteConfirm" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="border-bottom: 0px solid #e9ecef !important;">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <b style="font-size: 1.2rem;font-weight: 500;">Are you sure you want delete
+                                            this editor note?</b>
+                                    </div>
+                                    <div class="modal-footer" style="border-top: 0px solid #e9ecef !important;">
+                                        <button type="button" class="btn btn-success"
+                                            ng-click="confirmDelete()">Yes</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="viewEditorNoteInfo" class="modal fade" role="dialog">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content" style="text-align: center !important;">
+                                    <div class="modal-header"
+                                        style="border-bottom: 0px solid #e9ecef !important;display: table !important;">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title" style="margin: 0px 0 10px !important;
+                                        font-weight: 400 !important;">Editor note Details</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                <table class="table table-bordered" style="padding: 5px;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th><span>Title</span></th>
+                                                            <td>{{viewEditorNotData.title}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><span>Full description</span></th>
+                                                            <td>{{viewEditorNotData.fullDesc}}</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" style="border-top: 0px solid #e9ecef !important;">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    th>span {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .full-txt {
+        width: 300px;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    td>span {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    td {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+</style>

@@ -1,0 +1,146 @@
+{
+  "name": "Customer",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "default": null
+    },
+    "email": {
+      "type": "string"
+    },
+    "otp": {
+      "type": "string",
+      "default": null
+    },
+    "isOlder": {
+      "type": "boolean",
+      "default": false
+    },
+    "male": {
+      "type": "boolean",
+      "default": false
+    },
+    "isOnline": {
+      "type": "boolean",
+      "default": false
+    },
+    "female": {
+      "type": "boolean",
+      "default": false
+    },
+    "reasonTxt": {
+      "type": "string",
+      "default": null
+    },
+    "isBlock": {
+      "type": "boolean",
+      "default": false
+    },
+    "googleId": {
+      "type": "string",
+      "default": null
+    },
+    "name": {
+      "type": "string",
+      "default": null
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": null
+    },
+    "socketId": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "AccessToken",
+      "foreignKey": "customerId",
+      "options": {
+        "disableInclude": true
+      }
+    },
+    "likeAndDisLikes": {
+      "type": "hasMany",
+      "model": "LikeAndDisLike",
+      "foreignKey": ""
+    },
+    "customerBlockCmds": {
+      "type": "hasMany",
+      "model": "CustomerBlockCmd",
+      "foreignKey": "customerId"
+    },
+    "forumCommands": {
+      "type": "hasMany",
+      "model": "ForumCommand",
+      "foreignKey": ""
+    },
+    "contactus": {
+      "type": "hasMany",
+      "model": "Contactus",
+      "foreignKey": ""
+    },
+    "customerChatLists": {
+      "type": "hasOne",
+      "model": "CustomerChatList",
+      "foreignKey": ""
+    },
+    "chatLists": {
+      "type": "hasOne",
+      "model": "ChatList",
+      "foreignKey": ""
+    },
+    "groupContacts": {
+      "type": "hasMany",
+      "model": "GroupContact",
+      "foreignKey": ""
+    },
+    "groupChats": {
+      "type": "hasMany",
+      "model": "GroupChat",
+      "foreignKey": "senderId"
+    },
+    "readedOfMsgs": {
+      "type": "hasMany",
+      "model": "ReadedOfMsg",
+      "foreignKey": ""
+    },
+    "friendRequests": {
+      "type": "hasMany",
+      "model": "FriendRequest",
+      "foreignKey": "requestId"
+    },
+    "friendAccept": {
+      "type": "hasMany",
+      "model": "FriendRequest",
+      "foreignKey": "acceptId"
+    },
+    "friendLists": {
+      "type": "hasOne",
+      "model": "FriendList",
+      "foreignKey": ""
+    },
+    "teenacheCommands": {
+      "type": "hasMany",
+      "model": "TeenacheCommand",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

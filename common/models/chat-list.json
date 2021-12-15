@@ -1,0 +1,49 @@
+{
+  "name": "ChatList",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "time_order": {
+      "type": "number"
+    },
+    "isGroup": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customerChatList": {
+      "type": "belongsTo",
+      "model": "CustomerChatList",
+      "foreignKey": ""
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "privateChats": {
+      "type": "hasMany",
+      "model": "PrivateChat",
+      "foreignKey": ""
+    },
+    "groups": {
+      "type": "belongsTo",
+      "model": "Groups",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

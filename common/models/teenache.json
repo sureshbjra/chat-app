@@ -1,0 +1,49 @@
+{
+  "name": "Teenache",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isForum": {
+      "type": "boolean",
+      "default": false
+    },
+    "isArticle": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "fullDesc": {
+      "type": "string"
+    },
+    "img": {
+      "type": "object"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "likeAndDisLikes": {
+      "type": "hasMany",
+      "model": "LikeAndDisLike",
+      "foreignKey": ""
+    },
+    "teenacheCommands": {
+      "type": "hasMany",
+      "model": "TeenacheCommand",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

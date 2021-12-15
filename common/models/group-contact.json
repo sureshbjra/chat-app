@@ -1,0 +1,36 @@
+{
+  "name": "GroupContact",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "isAdmin": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "groups": {
+      "type": "belongsTo",
+      "model": "Groups",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

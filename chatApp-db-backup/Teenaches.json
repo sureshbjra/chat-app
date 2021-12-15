@@ -1,0 +1,54 @@
+[
+  {
+    "isForum": false,
+    "isArticle": true,
+    "title": "Problems with the Prototype Fast Breeder Reactor",
+    "category": "Campus Life",
+    "fullDesc": "It is 2021 and the Prototype Fast Breeder Reactor (PFBR) being constructed in Kalpakkam, Tamil Nadu, by Bharatiya Nabhikiya Vidyut Nigam Ltd (BHAVINI) is officially more than a decade late. Construction of the PFBR started in 2004; at that time the official timeline was the reactor would be starting up (“first criticality” in technical jargon) in 2010 and commercial operation would start in 2011. A recent update from September 2020 says that the PFBR “is expected to get commissioned by October 2022”. There is good reason to expect it to be further delayed.",
+    "img": {
+      "filename": "1615136555062.jpg",
+      "path": "http://139.59.87.248:3000/views/uploads/1615136555062.jpg"
+    },
+    "isCreate": "2021-03-07T17:02:35.224Z",
+    "id": "6045072bec9db1758ef751a2"
+  },
+  {
+    "isForum": true,
+    "isArticle": false,
+    "title": "How (Not) to Fight Monopolies",
+    "category": "Love Corner",
+    "fullDesc": "In 1942, the famed Austrian economist Joseph Schumpeter coined the phrase “creative destruction” to describe a fundamental aspect of capitalism. He defined it as “the process of industrial mutation that incessantly revolutionizes the economic structure from within, incessantly destroying the old one, incessantly creating a new one.”",
+    "img": {
+      "filename": "1615136602582.jpg",
+      "path": "http://139.59.87.248:3000/views/uploads/1615136602582.jpg"
+    },
+    "isCreate": "2021-03-07T17:03:22.770Z",
+    "id": "6045075aec9db1758ef751a3"
+  },
+  {
+    "isForum": false,
+    "isArticle": true,
+    "title": "The Perils of Agribusiness Profits",
+    "category": "Chillin",
+    "fullDesc": "In all of the 20th century we have had only three pandemics, including the Spanish flu beginning 1918. In just the first two decades of the 21st century, we have encountered five pandemics: avian flu in 2009, SARS in 2002, MERS in 2012, Ebola in 2013-14 and finally Covid-19 in 2020.",
+    "img": {
+      "filename": "1615136647621.jpg",
+      "path": "http://139.59.87.248:3000/views/uploads/1615136647621.jpg"
+    },
+    "isCreate": "2021-03-07T17:04:07.807Z",
+    "id": "60450787ec9db1758ef751a4"
+  },
+  {
+    "isForum": true,
+    "isArticle": false,
+    "title": "‘One Nation’, New India and the Hollowing Out of the Federal Idea",
+    "category": "Rainy Days and mood",
+    "fullDesc": "Since 2014, when “New India” was apparently inaugurated, we are in a remarkably similar phase of federalism as in the 1970s and early 1980s when the centre called the shots and state autonomy was constrained. With the \"One Nation, One India\" rhetoric now in the limelight, the era of \"federalism without a centre\" (Sáez 2002), when the states show initiative and pluck, now appears distant. Yet, this New India is also different. There is a concerted push to inaugurate a new project and reimagine the \"idea of India\" (Khilnani 1997). ",
+    "img": {
+      "filename": "1615136687290.png",
+      "path": "http://139.59.87.248:3000/views/uploads/1615136687290.png"
+    },
+    "isCreate": "2021-03-07T17:04:47.521Z",
+    "id": "604507afec9db1758ef751a5"
+  }
+]

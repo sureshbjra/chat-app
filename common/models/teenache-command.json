@@ -1,0 +1,54 @@
+{
+  "name": "TeenacheCommand",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date"
+    },
+    "dateTxt": {
+      "type": "string"
+    },
+    "dateNo": {
+      "type": "number"
+    },
+    "month": {
+      "type": "number"
+    },
+    "year": {
+      "type": "number"
+    },
+    "time": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "new"
+    },
+    "command": {
+      "type": "string"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "teenache": {
+      "type": "belongsTo",
+      "model": "Teenache",
+      "foreignKey": ""
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

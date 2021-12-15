@@ -1,0 +1,53 @@
+<div class="content" style="margin-top: 3rem;" ng-controller="createBlogCtl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-rose card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h3 class="card-title" style="font-weight: 500;">Create Blog</h3>
+                    </div>
+                    <div class="card-content" style="padding: 20px;">
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label">Title</label>
+                            <input type="text" id="title" class="form-control">
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="title_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label">Full description</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="desc_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <label class="control-label">Images</label>
+                                    <input type="file" id="blog_images" name="myFile" class="blog_images">
+                                    <span style="color: red;font-weight: 600;" id="img_err"></span>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                    <div class="form-check form-check-inline" style="margin-top: 2.5rem;">
+                                        <label class="form-check-label">
+                                            <input class="form-check-input" id="isPrivate" type="checkbox" value="">Is Private
+                                            <span class="form-check-sign">
+                                                <span class="check"></span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group label-floating is-empty" style="text-align: right;">
+                            <button type="button" id="create_btn" ng-click="create()" style="font-size: 1.2rem;"
+                                class="btn btn-fill btn-rose">Submit<div class="ripple-container"></div></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

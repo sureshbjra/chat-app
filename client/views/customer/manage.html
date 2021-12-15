@@ -1,0 +1,255 @@
+<div class="content" style="margin-top: 3rem;" ng-controller="manageCustomerCtl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-rose card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h3 class="card-title" style="font-weight: 500;">Manage customer</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-right">
+                                <button type="button" ui-sref="create-customer" class="btn btn btn-success"
+                                    style="font-size: 1.2rem;text-transform: inherit;">
+                                    Create customer
+                                </button>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                <div class="table-responsive" style="margin-top: 2rem !important;">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th><span>Name</span></th>
+                                                <th><span>Email</span></th>
+                                                <th><span>Gender</span></th>
+                                                <th><span>isOlder</span></th>
+                                                <th><span>Block/Unblock</span></th>
+                                                <th><span>Actions</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="list in customerList">
+                                                <td>
+                                                    <span ng-show="list.name && list.name!='undefined'">
+                                                        {{list.name}}
+                                                    </span>
+                                                    <span ng-show="!list.name || list.name=='undefined'">
+                                                        <i>NA</i>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span ng-show="list.email && list.email!='undefined'">
+                                                        {{list.email}}
+                                                    </span>
+                                                    <span ng-show="!list.email || list.email=='undefined'">
+                                                        <i>NA</i>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span ng-show="list.male">Male</span>
+                                                    <span ng-show="list.female">Female</span>
+                                                    <span ng-show="!list.female && !list.male">
+                                                        <i>NA</i>
+                                                    </span>
+                                                </td>
+                                                <td>
+                                                    <span ng-show="list.isOlder">Yes</span>
+                                                    <span ng-show="!list.isOlder">No</span>
+                                                </td>
+                                                <td>
+                                                    <div class="togglebutton">
+                                                        <label>
+                                                            <input type="checkbox" ng-model="isBlock" id="isBlock"
+                                                                ng-click="blockUnBlog(list.id)">
+                                                            <span class="toggle"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td class="td-actions">
+                                                    <button type="button" rel="tooltip" class="btn btn-info btn-round"
+                                                        data-original-title="" ng-click="viewCustomer(list.id)" title="">
+                                                        <i class="material-icons">remove_red_eye</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip"
+                                                        class="btn btn-success btn-round" data-original-title=""
+                                                        title="" ng-click="editCustomer(list.id)">
+                                                        <i class="material-icons">edit</i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip"
+                                                        ng-click="deleteConfirm(list.id)"
+                                                        class="btn btn-danger btn-round" data-original-title=""
+                                                        title="">
+                                                        <i class="material-icons">delete</i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="modalDeleteConfirm" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="border-bottom: 0px solid #e9ecef !important;">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <b style="font-size: 1.2rem;font-weight: 500;">Are you sure you want delete
+                                                this customer?</b>
+                                        </div>
+                                        <div class="modal-footer" style="border-top: 0px solid #e9ecef !important;">
+                                            <button type="button" class="btn btn-success"
+                                                ng-click="confirmDelete()">Yes</button>
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">No</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="viewCustomerInfo" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content" style="text-align: center !important;">
+                                        <div class="modal-header" style="border-bottom: 0px solid #e9ecef !important;display: table !important;">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h3 class="modal-title" style="margin: 0px 0 10px !important;
+                                            font-weight: 400 !important;">Customer Details</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                                    <table class="table table-bordered" style="padding: 5px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Name</th>
+                                                                <td>{{customerViewdata.name}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Email</th>
+                                                                <td>{{customerViewdata.email}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Gender</th>
+                                                                <td>
+                                                                    <span ng-show="customerViewdata.male">Male</span>
+                                                                    <span ng-show="customerViewdata.female">Female</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Older</th>
+                                                                <td>
+                                                                    <span ng-show="customerViewdata.isOlder">Yes</span>
+                                                                    <span ng-show="!customerViewdata.isOlder">No</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Block</th>
+                                                                <td>
+                                                                    <span ng-show="customerViewdata.isBlock">Yes</span>
+                                                                    <span ng-show="!customerViewdata.isBlock">No</span>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Image</th>
+                                                                <td>
+                                                                   <img class="img-thumbnail" ng-src="{{customerViewdata.imageUrl}}" src="{{customerViewdata.imageUrl}}">
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer" style="border-top: 0px solid #e9ecef !important;">
+                                            <button type="button" class="btn btn-danger"
+                                                data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="blockAndUnBlockModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="border-bottom: 0px solid #e9ecef;">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row" ng-show="isTextShow">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-121 col-xl-12">
+                                                    <h3 class="blockAndUnBlockTxt"
+                                                        style="font-weight: 400;    font-size: 1.2625rem;"></h3>
+                                                </div>
+                                            </div>
+                                            <div class="row" ng-show="isReasonShow">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-121 col-xl-12">
+                                                    <div class="form-group">
+                                                        <label for="reasons">Enter the reason</label>
+                                                        <textarea class="form-control" rows="3" id="reason"></textarea>
+                                                        <span id="reason_err"
+                                                            style="color: red; font-size: 1rem; font-weight: 400;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer" style="border-top: 0px solid #e9ecef;">
+                                            <button type="button" class="btn btn-success"
+                                                ng-click="blockAction(true)">Yes</button>
+                                            <button type="button" class="btn btn-danger"
+                                                ng-click="blockAction(false)">No</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    th>span {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    .full-txt {
+        width: 300px;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    td>span {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    td {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .togglebutton label input[type=checkbox]:checked+.toggle:after {
+        border-color: #4caf50 !important;
+    }
+
+    .togglebutton label input[type=checkbox]:checked+.toggle {
+        background-color: #4caf50 !important;
+    }
+
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {
+        padding: 4px 0px !important;
+    }
+</style>

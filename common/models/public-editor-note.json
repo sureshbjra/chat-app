@@ -1,0 +1,28 @@
+{
+  "name": "PublicEditorNote",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "fullDesc": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "default": "new"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

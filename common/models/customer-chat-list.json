@@ -1,0 +1,34 @@
+{
+  "name": "CustomerChatList",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "chatLists": {
+      "type": "hasMany",
+      "model": "ChatList",
+      "foreignKey": ""
+    },
+    "friendLists": {
+      "type": "hasMany",
+      "model": "FriendList",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

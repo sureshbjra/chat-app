@@ -1,0 +1,40 @@
+{
+  "name": "Groups",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "time_order": {
+      "type": "number"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "groupContacts": {
+      "type": "hasMany",
+      "model": "GroupContact",
+      "foreignKey": ""
+    },
+    "chatList": {
+      "type": "hasOne",
+      "model": "ChatList",
+      "foreignKey": ""
+    },
+    "groupChats": {
+      "type": "hasMany",
+      "model": "GroupChat",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

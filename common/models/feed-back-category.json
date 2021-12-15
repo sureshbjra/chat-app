@@ -1,0 +1,30 @@
+{
+  "name": "FeedBackCategory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "_name": {
+      "type": "string"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "contactus": {
+      "type": "hasMany",
+      "model": "Contactus",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

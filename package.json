@@ -1,0 +1,43 @@
+{
+  "name": "ChatAppBackend",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint"
+  },
+  "dependencies": {
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "helmet": "^3.10.0",
+    "loopback": "^3.22.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.2.0",
+    "loopback-component-passport": "^3.12.0",
+    "loopback-connector-mongodb": "^5.4.0",
+    "moment": "^2.29.0",
+    "moment-timezone": "^0.5.31",
+    "multer": "^1.4.2",
+    "nodemailer": "^4.7.0",
+    "serve-favicon": "^2.0.1",
+    "socket.io": "^2.3.0",
+    "strong-error-handler": "^3.0.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "ChatAppBackend"
+}

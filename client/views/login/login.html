@@ -1,0 +1,215 @@
+<!-- creative-tim -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76"
+    href="https://demos.creative-tim.com/material-kit-pro/assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="https://demos.creative-tim.com/material-kit-pro/assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Yourz Truly Login
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <!-- Extra details for Live View on GitHub Pages -->
+  <!-- Canonical SEO -->
+  <link rel="canonical" href="https://www.creative-tim.com/product/material-kit-pro" />
+  <!--  Social tags      -->
+  <meta name="keywords" content="Yourz Truly login">
+  <meta name="description" content="Yourz Truly login">
+  <!-- Schema.org markup for Google+ -->
+  <meta itemprop="name" content="Yourz Truly login">
+  <meta itemprop="description" content="Yourz Truly login">
+  <meta itemprop="image"
+    content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="product">
+  <meta name="twitter:site" content="@creativetim">
+  <meta name="twitter:title" content="ChatApp Dashboard">
+  <meta name="twitter:description" content="ChatApp Dashboard">
+  <meta name="twitter:creator" content="@creativetim">
+  <meta name="twitter:image"
+    content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg">
+  <!-- Open Graph data -->
+  <meta property="fb:app_id" content="655968634437471">
+  <meta property="og:title" content="Yourz Truly login" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://demos.creative-tim.com/material-kit-pro/presentation.html" />
+  <meta property="og:image"
+    content="https://s3.amazonaws.com/creativetim_bucket/products/46/original/opt_mkp_thumbnail.jpg" />
+  <meta property="og:description" content="ChatApp Dashboard" />
+  <meta property="og:site_name" content="ChatApp Dashboard" />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="https://demos.creative-tim.com/material-kit-pro/assets/css/material-kit.min.css?v=2.2.0"
+    rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="https://demos.creative-tim.com/material-kit-pro/assets/demo/demo.min.css" rel="stylesheet" />
+  <link href="https://demos.creative-tim.com/material-kit-pro/assets/demo/vertical-nav.min.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+</head>
+
+<body class="login-page sidebar-collapse" ng-app="app">
+  <script>
+    angular
+      .module('app', [])
+      .controller('loginCtl', function ($scope, $http) {
+        toastMsg = (isVaild, msg) => {
+          if (isVaild)
+            toastr.success(msg);
+          else
+            toastr.error(msg);
+          toastr.options = { "closeButton": true, "progressBar": true, "timeOut": "5000" };
+        }
+        $scope.login = () => {
+          let email = $("#email").val(),
+            password = $("#password").val();
+          if (email && password) {
+            $http({
+              method: "GET",
+              url: `http://65.0.104.144:3000/api/Admins/customLogin?params={"email":"${email}", "password": "${password}"}`
+            }).then((res) => {
+              if (res && res.data && res.data.data) {
+                let { isSuccess, result } = res.data.data;
+                if (isSuccess) {
+                  let isAdmin = (result.isAdmin ? true : false)
+                  let userDetails = {
+                    "id": result.userId,
+                    "tokenId": result.id,
+                    "email": email,
+                    isAdmin
+                  };
+                  localStorage.removeItem("userSession");
+                  localStorage.setItem("userSession", JSON.stringify(userDetails));
+                  var link = document.createElement('a');
+                  link.href = "/dashboard";
+                  document.body.appendChild(link);
+                  link.click();
+                } else {
+                  toastMsg(false, "Invaild email or password. Please try again!");
+                  $(".loader").fadeOut('slow', function () {
+                    $(this).css({ display: 'none' })
+                  });
+                }
+              } else {
+                toastMsg(false, "Invaild email or password. Please try again!");
+                $(".loader").fadeOut('slow', function () {
+                  $(this).css({ display: 'none' })
+                });
+              }
+            }, (err) => {
+              toastMsg(false, "Invaild email or password. Please try again!");
+              $(".loader").fadeOut('slow', function () {
+                $(this).css({ display: 'none' })
+              });
+            });
+          } else {
+            toastMsg(false, "Email and Password is required. Please try again!");
+            $(".loader").fadeOut('slow', function () {
+              $(this).css({ display: 'none' })
+            });
+          }
+        }
+      });
+  </script>
+  <div class="page-header" ng-controller="loginCtl">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+          <form class="form" method="" action="">
+            <div class="card card-login card-hidden">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Login</h4>
+                <div class="social-line">
+                  <a href="javascript:;" class="btn btn-just-icon btn-link btn-white">
+                    <i class="fa fa-facebook-square"></i>
+                  </a>
+                  <a href="javascript:;" class="btn btn-just-icon btn-link btn-white">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="javascript:;" class="btn btn-just-icon btn-link btn-white">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">email</i>
+                      </span>
+                    </div>
+                    <input type="email" id="email" class="form-control" placeholder="Email...">
+                  </div>
+                </span>
+                <span class="bmd-form-group">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="material-icons">lock_outline</i>
+                      </span>
+                    </div>
+                    <input type="password" id="password" class="form-control" placeholder="Password...">
+                  </div>
+                </span>
+              </div>
+              <div class="card-footer justify-content-center">
+                <button type="button" ng-click="login()" class="btn  btn-primary">Let's go</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/core/jquery.min.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/core/popper.min.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/core/bootstrap-material-design.min.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/moment.min.js"></script>
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/bootstrap-datetimepicker.js"
+    type="text/javascript"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/nouislider.min.js"
+    type="text/javascript"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2Yno10-YTnLjjn_Vtk0V8cdcY5lC4plU"></script>
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!--	Plugin for Sharrre btn -->
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/jquery.sharrre.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/bootstrap-selectpicker.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/jasny-bootstrap.min.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/plugins/jquery.flexisel.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/demo/modernizr.js"
+    type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/demo/vertical-nav.js"
+    type="text/javascript"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/demo/demo.js" type="text/javascript"></script>
+  <script src="https://demos.creative-tim.com/material-kit-pro/assets/js/material-kit.min.js?v=2.2.0"
+    type="text/javascript"></script>
+</body>
+
+</html>

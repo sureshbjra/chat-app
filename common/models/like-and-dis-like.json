@@ -1,0 +1,48 @@
+{
+  "name": "LikeAndDisLike",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    },
+    "category": {
+      "type": "string"
+    },
+    "isLike": {
+      "type": "boolean"
+    },
+    "isDislike": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    },
+    "blog": {
+      "type": "belongsTo",
+      "model": "Blog",
+      "foreignKey": ""
+    },
+    "forum": {
+      "type": "belongsTo",
+      "model": "Forum",
+      "foreignKey": ""
+    },
+    "teenache": {
+      "type": "belongsTo",
+      "model": "Teenache",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

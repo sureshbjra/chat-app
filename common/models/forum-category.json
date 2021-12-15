@@ -1,0 +1,34 @@
+{
+  "name": "ForumCategory",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "_name": {
+      "type": "string"
+    },
+    "_type": {
+      "type": "string",
+      "default": "forum"
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "validations": [],
+  "relations": {
+    "forums": {
+      "type": "hasMany",
+      "model": "Forum",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

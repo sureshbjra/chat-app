@@ -1,0 +1,34 @@
+<div class="content" style="margin-top: 3rem;" ng-controller="createPubliceditornoteCtl">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-rose card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">assignment</i>
+                        </div>
+                        <h3 class="card-title" style="font-weight: 500;">Create editor's note</h3>
+                    </div>
+                    <div class="card-content" style="padding: 20px;">
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label">Title</label>
+                            <input type="text" id="title" class="form-control">
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="title_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty">
+                            <label class="control-label">Full description</label>
+                            <textarea class="form-control"  rows="5" id="full-descrption"></textarea>
+                            <span class="material-input"></span>
+                            <span style="color: red;font-weight: 600;" id="desc_err"></span>
+                        </div>
+                        <div class="form-group label-floating is-empty" style="text-align: right;">
+                            <button type="button" id="create_btn" ng-click="create()" style="font-size: 1.2rem;"
+                                class="btn btn-fill btn-rose">Submit<div class="ripple-container"></div></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

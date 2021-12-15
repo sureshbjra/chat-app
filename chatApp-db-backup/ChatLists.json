@@ -1,0 +1,276 @@
+[
+  {
+    "name": "Test grp 1",
+    "isGroup": true,
+    "isCreate": "2021-02-16T05:15:05.608Z",
+    "id": "602b54d919f078644abe92a8",
+    "customerChatListId": "602b54ca19f078644abe92a2",
+    "customerId": "6027ac4be42e90525911c46a",
+    "groupsId": "602b54d919f078644abe92a5"
+  },
+  {
+    "name": "Test grp 1",
+    "isGroup": true,
+    "isCreate": "2021-02-16T05:15:05.609Z",
+    "id": "602b54d919f078644abe92a9",
+    "customerChatListId": "602b54ca19f078644abe92a1",
+    "customerId": "601d512bd6d62639faea73f1",
+    "groupsId": "602b54d919f078644abe92a5"
+  },
+  {
+    "time_order": 1613478045813,
+    "isGroup": false,
+    "isCreate": "2021-02-16T05:18:28.415Z",
+    "id": "602b55a419f078644abe92b4",
+    "customerChatListId": "602b55a419f078644abe92b3",
+    "customerId": "601d512bd6d62639faea73f1"
+  },
+  {
+    "time_order": 1613478045808,
+    "isGroup": false,
+    "isCreate": "2021-02-16T05:18:28.419Z",
+    "id": "602b55a419f078644abe92b6",
+    "customerChatListId": "602b54ca19f078644abe92a1",
+    "customerId": "601d9761d6d62639faea7445"
+  },
+  {
+    "name": "Chat grp 2",
+    "isGroup": true,
+    "isCreate": "2021-02-16T05:18:28.965Z",
+    "id": "602b55a419f078644abe92bb",
+    "customerChatListId": "602b54ca19f078644abe92a2",
+    "customerId": "6027ac4be42e90525911c46a",
+    "groupsId": "602b55a419f078644abe92b8"
+  },
+  {
+    "name": "Chat grp 2",
+    "isGroup": true,
+    "isCreate": "2021-02-16T05:18:28.966Z",
+    "id": "602b55a419f078644abe92bc",
+    "customerChatListId": "602b54ca19f078644abe92a1",
+    "customerId": "601d512bd6d62639faea73f1",
+    "groupsId": "602b55a419f078644abe92b8"
+  },
+  {
+    "time_order": 1618152227018,
+    "isGroup": false,
+    "isCreate": "2021-02-16T08:24:30.511Z",
+    "id": "602b813e19f078644abe92cc",
+    "customerChatListId": "602b813e19f078644abe92ca",
+    "customerId": "602a7f744877615c84fb7f57"
+  },
+  {
+    "time_order": 1618152227014,
+    "isGroup": false,
+    "isCreate": "2021-02-16T08:24:30.516Z",
+    "id": "602b813e19f078644abe92ce",
+    "customerChatListId": "602b813e19f078644abe92cb",
+    "customerId": "601d50e1d6d62639faea73ef"
+  },
+  {
+    "time_order": 1618145459275,
+    "isGroup": false,
+    "isCreate": "2021-02-16T08:25:33.740Z",
+    "id": "602b817d19f078644abe92d0",
+    "customerChatListId": "602b813e19f078644abe92ca",
+    "customerId": "601d512bd6d62639faea73f1"
+  },
+  {
+    "time_order": 1618145459267,
+    "isGroup": false,
+    "isCreate": "2021-02-16T08:25:33.745Z",
+    "id": "602b817d19f078644abe92d2",
+    "customerChatListId": "602b54ca19f078644abe92a1",
+    "customerId": "601d50e1d6d62639faea73ef"
+  },
+  {
+    "name": "test",
+    "isGroup": true,
+    "isCreate": "2021-02-16T10:45:19.943Z",
+    "id": "602ba23f19f078644abe92de",
+    "customerChatListId": "602b813e19f078644abe92ca",
+    "customerId": "601d50e1d6d62639faea73ef",
+    "groupsId": "602ba23f19f078644abe92da"
+  },
+  {
+    "name": "test grp 6",
+    "isGroup": true,
+    "isCreate": "2021-02-16T10:46:43.232Z",
+    "id": "602ba29319f078644abe92e3",
+    "customerChatListId": "602b54ca19f078644abe92a1",
+    "customerId": "601d512bd6d62639faea73f1",
+    "groupsId": "602ba29319f078644abe92df"
+  },
+  {
+    "isGroup": true,
+    "isCreate": "2021-02-16T10:47:03.765Z",
+    "id": "602ba2a719f078644abe92e7",
+    "customerChatListId": "602b54ca19f078644abe92a2",
+    "customerId": "6027ac4be42e90525911c46a",
+    "groupsId": "602ba29319f078644abe92df"
+  },
+  {
+    "isGroup": true,
+    "isCreate": "2021-02-16T10:48:10.639Z",
+    "id": "602ba2ea19f078644abe92f0",
+    "customerChatListId": "602b813e19f078644abe92cb",
+    "customerId": "602a7f744877615c84fb7f57",
+    "groupsId": "602ba23f19f078644abe92da"
+  },
+  {
+    "time_order": 1613475174859,
+    "isGroup": false,
+    "isCreate": "2021-02-16T11:32:54.862Z",
+    "id": "602bad6619f078644abe92f9",
+    "customerChatListId": "602bad4319f078644abe92f5",
+    "customerId": "6028a1500b118227fca89d45"
+  },
+  {
+    "time_order": 1613475174862,
+    "isGroup": false,
+    "isCreate": "2021-02-16T11:32:54.865Z",
+    "id": "602bad6619f078644abe92fb",
+    "customerChatListId": "602bad4319f078644abe92f6",
+    "customerId": "601d9485d6d62639faea7444"
+  },
+  {
+    "name": "groupa1",
+    "isGroup": true,
+    "isCreate": "2021-02-16T11:33:57.202Z",
+    "id": "602bada519f078644abe9301",
+    "customerChatListId": "602bad4319f078644abe92f6",
+    "customerId": "6028a1500b118227fca89d45",
+    "groupsId": "602bada519f078644abe92fd"
+  },
+  {
+    "isGroup": true,
+    "isCreate": "2021-02-16T11:34:57.918Z",
+    "id": "602bade119f078644abe9306",
+    "customerChatListId": "602bad4319f078644abe92f5",
+    "customerId": "601d9485d6d62639faea7444",
+    "groupsId": "602bada519f078644abe92fd"
+  },
+  {
+    "time_order": 1618497710776,
+    "isGroup": false,
+    "isCreate": "2021-02-16T12:05:08.941Z",
+    "id": "602bb4f419f078644abe930b",
+    "customerChatListId": "602b55a419f078644abe92b3",
+    "customerId": "601fe753d6d62639faea744d"
+  },
+  {
+    "time_order": 1618497710780,
+    "isGroup": false,
+    "isCreate": "2021-02-16T12:05:08.946Z",
+    "id": "602bb4f419f078644abe930d",
+    "customerChatListId": "602bb4f419f078644abe930a",
+    "customerId": "601d9761d6d62639faea7445"
+  },
+  {
+    "time_order": 1615370577906,
+    "isGroup": false,
+    "isCreate": "2021-02-16T12:08:48.094Z",
+    "id": "602bb5d019f078644abe9312",
+    "customerChatListId": "602b55a419f078644abe92b3",
+    "customerId": "601d77fad6d62639faea741c"
+  },
+  {
+    "time_order": 1615370577909,
+    "isGroup": false,
+    "isCreate": "2021-02-16T12:08:48.095Z",
+    "id": "602bb5d019f078644abe9313",
+    "customerChatListId": "602bb5d019f078644abe9311",
+    "customerId": "601d9761d6d62639faea7445"
+  },
+  {
+    "time_order": 1618497701279,
+    "isGroup": false,
+    "isCreate": "2021-02-16T12:17:28.159Z",
+    "id": "602bb7d819f078644abe931a",
+    "customerChatListId": "602b55a419f078644abe92b3",
+    "customerId": "602bb7ad19f078644abe9318"
+  },
+  {
+    "time_order": 1618497701282,
+    "isGroup": false,
+    "isCreate": "2021-02-16T12:17:28.161Z",
+    "id": "602bb7d819f078644abe931b",
+    "customerChatListId": "602bb7d819f078644abe9319",
+    "customerId": "601d9761d6d62639faea7445"
+  },
+  {
+    "time_order": 1613546709572,
+    "isGroup": false,
+    "isCreate": "2021-02-16T13:19:16.357Z",
+    "id": "602bc65419f078644abe9366",
+    "customerChatListId": "602bad4319f078644abe92f6",
+    "customerId": "601d9761d6d62639faea7445"
+  },
+  {
+    "time_order": 1613546709574,
+    "isGroup": false,
+    "isCreate": "2021-02-16T13:19:16.368Z",
+    "id": "602bc65419f078644abe9368",
+    "customerChatListId": "602b55a419f078644abe92b3",
+    "customerId": "6028a1500b118227fca89d45"
+  },
+  {
+    "time_order": 1613567372464,
+    "isGroup": false,
+    "isCreate": "2021-02-17T13:09:14.225Z",
+    "id": "602d157a19f078644abe9372",
+    "customerChatListId": "602d157a19f078644abe9371",
+    "customerId": "601d512bd6d62639faea73f1"
+  },
+  {
+    "time_order": 1613567372466,
+    "isGroup": false,
+    "isCreate": "2021-02-17T13:09:14.238Z",
+    "id": "602d157a19f078644abe9374",
+    "customerChatListId": "602b54ca19f078644abe92a1",
+    "customerId": "602d154219f078644abe9370"
+  },
+  {
+    "name": "Friends ",
+    "isGroup": true,
+    "isCreate": "2021-03-10T10:18:40.712Z",
+    "id": "60489d0066d38601cbca22e3",
+    "customerChatListId": "602b55a419f078644abe92b3",
+    "customerId": "601d9761d6d62639faea7445",
+    "groupsId": "60489d0066d38601cbca22df"
+  },
+  {
+    "name": "test",
+    "isGroup": true,
+    "isCreate": "2021-03-12T07:01:12.290Z",
+    "id": "604b11b82d78cd4cddb7bd02",
+    "customerChatListId": "602bad4319f078644abe92f6",
+    "customerId": "6028a1500b118227fca89d45",
+    "groupsId": "604b11b82d78cd4cddb7bcff"
+  },
+  {
+    "name": "test",
+    "isGroup": true,
+    "isCreate": "2021-03-12T07:01:12.291Z",
+    "id": "604b11b82d78cd4cddb7bd03",
+    "customerChatListId": "602bad4319f078644abe92f5",
+    "customerId": "601d9485d6d62639faea7444",
+    "groupsId": "604b11b82d78cd4cddb7bcff"
+  },
+  {
+    "time_order": 1616642185470,
+    "isGroup": false,
+    "isCreate": "2021-03-25T03:16:25.471Z",
+    "id": "605c00892d78cd4cddb7bd0e",
+    "customerChatListId": "605c00892d78cd4cddb7bd0c",
+    "customerId": "601d7766d6d62639faea7415"
+  },
+  {
+    "time_order": 1616642185472,
+    "isGroup": false,
+    "isCreate": "2021-03-25T03:16:25.474Z",
+    "id": "605c00892d78cd4cddb7bd0f",
+    "customerChatListId": "605c00892d78cd4cddb7bd0d",
+    "customerId": "5f8d7c859b04e52109344c1b"
+  }
+]

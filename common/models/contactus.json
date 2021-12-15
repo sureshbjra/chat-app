@@ -1,0 +1,35 @@
+{
+  "name": "Contactus",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "attachment": {
+      "type": "string"
+    },
+    "commants": {
+      "type": "string"
+    },
+    "isCreate": {
+      "type": "date",
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "feedBackCategory": {
+      "type": "belongsTo",
+      "model": "FeedBackCategory",
+      "foreignKey": ""
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

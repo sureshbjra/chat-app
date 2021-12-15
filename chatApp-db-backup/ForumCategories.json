@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Life style/Your mind",
+    "_name": "lifestyle",
+    "_type": "forum",
+    "order": 1,
+    "id": "5f6a418ed0f2cd04123ce1fa"
+  },
+  {
+    "name": "Career corner/Love corner",
+    "_name": "careercorner",
+    "_type": "forum",
+    "order": 2,
+    "id": "5f6a418ed0f2cd04123ce1fb"
+  },
+  {
+    "name": "Health/Hush Corner",
+    "_name": "Health",
+    "_type": "forum",
+    "order": 4,
+    "id": "5f6a418ed0f2cd04123ce1fc"
+  },
+  {
+    "name": "Media-sports/sex and sexuality",
+    "_name": "mediasports",
+    "_type": "forum",
+    "order": 6,
+    "id": "5f6a418ed0f2cd04123ce1fe"
+  },
+  {
+    "name": "Beauty corner/Family and Relationship",
+    "_name": "Beauty_corner_",
+    "_type": "forum",
+    "order": 7,
+    "id": "5f6a418ed0f2cd04123ce1ff"
+  },
+  {
+    "name": "Food and recipes/Confidentiality page",
+    "_name": "Food_and_recipes_greenenergy",
+    "_type": "forum",
+    "order": 8,
+    "id": "5f6a418ed0f2cd04123ce200"
+  },
+  {
+    "name": "Event Corner/Campus life",
+    "_name": "event_corner",
+    "_type": "forum",
+    "order": 10,
+    "id": "5f6a418ed0f2cd04123ce202"
+  },
+  {
+    "name": "Blog",
+    "_name": "blog",
+    "_type": "blog",
+    "order": 3,
+    "id": "5f6a418ed0f2cd04123ce203"
+  },
+  {
+    "name": "NRI Corner/Rainy days and moods",
+    "_name": "Rainy_days_and_moods",
+    "_type": "forum",
+    "order": 5,
+    "id": "5fa681b97b1d2640e8485ada"
+  },
+  {
+    "name": "Tutorials and How to/Helping Hand Corner",
+    "_name": "Helping_Hand_Corner",
+    "_type": "forum",
+    "order": 11,
+    "id": "5fa682307b1d2640e8485adb"
+  }
+]

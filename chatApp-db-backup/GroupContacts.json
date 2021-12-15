@@ -1,0 +1,93 @@
+[
+  {
+    "isAdmin": false,
+    "isCreate": "2021-02-16T05:15:05.596Z",
+    "id": "602b54d919f078644abe92a6",
+    "customerId": "6027ac4be42e90525911c46a",
+    "groupsId": "602b54d919f078644abe92a5"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-02-16T05:15:05.597Z",
+    "id": "602b54d919f078644abe92a7",
+    "customerId": "601d512bd6d62639faea73f1",
+    "groupsId": "602b54d919f078644abe92a5"
+  },
+  {
+    "isAdmin": false,
+    "isCreate": "2021-02-16T05:18:28.958Z",
+    "id": "602b55a419f078644abe92b9",
+    "customerId": "6027ac4be42e90525911c46a",
+    "groupsId": "602b55a419f078644abe92b8"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-02-16T05:18:28.958Z",
+    "id": "602b55a419f078644abe92ba",
+    "customerId": "601d512bd6d62639faea73f1",
+    "groupsId": "602b55a419f078644abe92b8"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-02-16T10:45:19.936Z",
+    "id": "602ba23f19f078644abe92dc",
+    "customerId": "601d50e1d6d62639faea73ef",
+    "groupsId": "602ba23f19f078644abe92da"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-02-16T10:46:43.225Z",
+    "id": "602ba29319f078644abe92e1",
+    "customerId": "601d512bd6d62639faea73f1",
+    "groupsId": "602ba29319f078644abe92df"
+  },
+  {
+    "isAdmin": false,
+    "isCreate": "2021-02-16T10:47:03.762Z",
+    "id": "602ba2a719f078644abe92e6",
+    "customerId": "6027ac4be42e90525911c46a",
+    "groupsId": "602ba29319f078644abe92df"
+  },
+  {
+    "isAdmin": false,
+    "isCreate": "2021-02-16T10:48:10.626Z",
+    "id": "602ba2ea19f078644abe92ef",
+    "customerId": "602a7f744877615c84fb7f57",
+    "groupsId": "602ba23f19f078644abe92da"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-02-16T11:33:57.197Z",
+    "id": "602bada519f078644abe92ff",
+    "customerId": "6028a1500b118227fca89d45",
+    "groupsId": "602bada519f078644abe92fd"
+  },
+  {
+    "isAdmin": false,
+    "isCreate": "2021-02-16T11:34:57.914Z",
+    "id": "602bade119f078644abe9305",
+    "customerId": "601d9485d6d62639faea7444",
+    "groupsId": "602bada519f078644abe92fd"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-03-10T10:18:40.706Z",
+    "id": "60489d0066d38601cbca22e1",
+    "customerId": "601d9761d6d62639faea7445",
+    "groupsId": "60489d0066d38601cbca22df"
+  },
+  {
+    "isAdmin": false,
+    "isCreate": "2021-03-12T07:01:12.284Z",
+    "id": "604b11b82d78cd4cddb7bd00",
+    "customerId": "6028a1500b118227fca89d45",
+    "groupsId": "604b11b82d78cd4cddb7bcff"
+  },
+  {
+    "isAdmin": true,
+    "isCreate": "2021-03-12T07:01:12.284Z",
+    "id": "604b11b82d78cd4cddb7bd01",
+    "customerId": "601d9485d6d62639faea7444",
+    "groupsId": "604b11b82d78cd4cddb7bcff"
+  }
+]
